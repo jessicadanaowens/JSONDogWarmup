@@ -44,6 +44,23 @@ $(document).ready(function () {
       }
     ]
   };
-  // Write come code to add the dogs to the table !!!!
+
+  var dogsArray = gschoolDogs.dogs
+  var dogsArrayLength = dogsArray.length
+
+  for ( var i = 0; i < dogsArray.length; i++ ) {
+    var dogsTable = $('.dogs')
+    dogsTable.append("<tr><td>" +
+      dogsArray[i].owner +
+      "</td><td>" +
+      dogsArray[i].name +
+      "</td><td>" +
+      dogsArray[i].preferences[0].favoriteFood +
+      "</td><td>" +
+      dogsArray[i].preferences[1].favoriteToy +
+      "</td></tr>");
+    console.log(dogsArray[i].owner);
+  }
+
 });
 
